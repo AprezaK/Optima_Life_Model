@@ -104,4 +104,4 @@ if st.button("Assess Churn Risk", type="primary"):
     with col2:
         st.metric("Renewal probability", f"{prob_renew:.1%}")
 
-    st.info(f"**Risk tier: {risk_label}** — {risk_action}")
+    st.info(f"**Risk tier: {risk_label}** - {risk_action}")
