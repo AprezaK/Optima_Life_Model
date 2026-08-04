@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 import gzip
 
-st.set_page_config(page_title="Optima Life Retention Predictor", layout="centered")
+st.set_page_config(page_title="Optima Life Churn Rirsk Predictor", layout="centered")
 
 PRODUCT_KEYS = {
     "Healthy Meals":     "healthy_meals",
@@ -26,9 +26,9 @@ def load_artifacts():
 
 product_artefacts = load_artifacts()
 
-st.title("Optima Life Retention Predictor")
+st.title("Optima Life Churn Risk Predictor")
 st.write("Choose a product, then describe a customer's activity and demographics "
-         "to predict renewal likelihood and recommended action.")
+         "to assess churn risk and recommended retention action.")
 
 product = st.selectbox("Product", list(product_artefacts.keys()))
 
