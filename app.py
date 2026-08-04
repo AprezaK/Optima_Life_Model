@@ -42,10 +42,9 @@ age = st.slider("Age", 20, 60, 36)
 tech_comfort = st.slider("Tech comfort score (1 = low, 5 = high)", 1, 5, 3)
 tenure_months = st.slider("Tenure (months since first subscription)", 0, 60, 24)
 
-_enc = product_artefacts["Healthy Meals"]["encoder"]
-INCOME_OPTIONS    = list(_enc.categories_[0])
-EDUCATION_OPTIONS = list(_enc.categories_[1])
-DEVICE_OPTIONS    = list(_enc.categories_[2])
+INCOME_OPTIONS    = ["Low", "Medium", "High", "Very High"]
+EDUCATION_OPTIONS = ["High School", "Graduate", "Post-Graduate", "Other"]
+DEVICE_OPTIONS    = ["Desktop-only", "Mobile-only", "Multi-device"]
 
 st.subheader("Customer profile")
 income_level = st.radio("Income Level", INCOME_OPTIONS, horizontal=True)
