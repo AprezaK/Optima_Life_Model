@@ -51,7 +51,7 @@ income_level = st.radio("Income Level", INCOME_OPTIONS, horizontal=True)
 education    = st.radio("Education", EDUCATION_OPTIONS, horizontal=True)
 device_type  = st.radio("Device Type", DEVICE_OPTIONS, horizontal=True)
 
-if st.button("Predict renewal probability", type="primary"):
+if st.button("Assess Churn Risk", type="primary"):
     art = product_artefacts[product]
     model, encoder = art["model"], art["encoder"]
 
@@ -100,8 +100,8 @@ if st.button("Predict renewal probability", type="primary"):
     st.markdown("### Prediction")
     col1, col2 = st.columns(2)
     with col1:
-        st.metric("Renewal probability", f"{prob_renew:.1%}")
-    with col2:
         st.metric("Churn probability", f"{prob_churn:.1%}")
+    with col2:
+        st.metric("Renewal probability", f"{prob_renew:.1%}")
 
     st.info(f"**Risk tier: {risk_label}** — {risk_action}")
